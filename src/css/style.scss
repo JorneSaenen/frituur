@@ -8,12 +8,21 @@
   background: #fed400;
   color: #fff;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
+
+.container {
+  max-width: 1170px;
+  width: 70%;
+  margin: 0 auto;
+}
+
 header {
   background-color: #fff;
   position: sticky;
@@ -22,10 +31,8 @@ header {
   height: 88px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .nav {
-  max-width: 1170px;
-  width: 70%;
-  margin: 0 auto;
   height: 100%;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +91,19 @@ header {
       background: #efefef;
     }
   }
+  .hamburger {
+    display: none;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: #fed400;
+    }
+  }
 }
+
 .section-one {
   background-color: #000;
   height: calc(100vh - 88px);
@@ -94,10 +113,7 @@ header {
 }
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column);
   &__img {
     &--one {
       width: 271px;
@@ -114,14 +130,7 @@ header {
 }
 
 .section-two {
-  max-width: 1170px;
-  width: 70%;
-  margin: 0 auto;
-  height: 572px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column);
   &__title {
     display: flex;
     flex-direction: column;
@@ -133,6 +142,8 @@ header {
       color: #333;
       text-transform: uppercase;
       margin-bottom: 20px;
+      margin-top: 100px;
+
       strong {
         font-weight: 700;
       }
@@ -144,19 +155,11 @@ header {
     }
   }
   .cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include make-col(3, 45px);
     text-align: center;
     &__card {
-      width: 360px;
-      height: 194px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
 
       .icon {
         font-size: 52px;
@@ -165,7 +168,7 @@ header {
       }
       h3 {
         color: #333;
-        margin-bottom: 10px;
+        margin-bottom: 22px;
         font-size: 18px;
         font-weight: 600;
       }
@@ -184,14 +187,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .section-four {
-  height: 1266px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  @include flex(column, space-around);
   margin: 0 auto;
   h1 {
     font-size: 34px;
@@ -199,32 +199,33 @@ header {
     line-height: 1.8;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 32px;
+    margin-top: 96px;
     strong {
       font-weight: 700;
     }
   }
-  img {
+  .prijzen {
     max-width: 1200px;
+    img {
+      @include responsive();
+    }
   }
 }
+
 .section-five {
-  height: 521px;
+  height: 518px;
   background-image: url(../images/bicky2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .section-six {
-  max-width: 1170px;
-  width: 70%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 80px;
-  //height: 596px;
   h2 {
     font-size: 28px;
     font-weight: 700;
@@ -253,15 +254,12 @@ header {
   }
 }
 .section-seven {
-  max-width: 1170px;
-  margin: 0 auto;
   img {
     width: 100%;
   }
 }
-// .section-eight {
+// .section-eight {}
 
-// }
 .to-top {
   position: fixed;
   font-size: 30px;
@@ -275,5 +273,92 @@ header {
   transition: color 300ms;
   &:hover {
     color: #777;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 97%;
+  }
+  .section-two .cards {
+    @include make-col(3, 28px);
+  }
+}
+@media screen and (max-width: 940px) {
+  .container {
+    width: 97%;
+  }
+  .nav {
+    &__logo {
+      width: 250px;
+    }
+  }
+}
+@media screen and (max-width: 830px) {
+  .container {
+    width: 98%;
+  }
+  .nav {
+    &__logo {
+      width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 777px) {
+  .container {
+    width: 95%;
+  }
+  .nav {
+    &__list {
+      display: none;
+    }
+    &__logo {
+      width: 200px;
+    }
+    &__search {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      &.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      &.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .section-two {
+    .cards {
+      @include make-col(1, 14px);
+      width: 70%;
+      &__card {
+        .icon {
+          margin-bottom: 20px;
+        }
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  // TODO: section 1 verkleinen.
+}
+
+@media screen and (max-width: 500px) {
+  .section-three {
+    // voorlopig test
+    background-attachment: initial;
   }
 }

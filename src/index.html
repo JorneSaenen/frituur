@@ -9,15 +9,16 @@
   </head>
   <body>
     <include src="./symbol-defs.svg"></include>
+    <span id="home"></span>
     <!-- <include src="./header.html"></include> -->
     <header>
-      <nav class="nav">
+      <nav class="nav container">
         <a href="./"
           ><img src="./images/LOGO-zwart-kleur-2.png" alt="top-logo" class="nav__logo"
         /></a>
         <ul class="nav__list">
-          <li class="nav__item nav__item--active"><a href="#">home</a></li>
-          <li class="nav__item"><a href="#over-ons">over ons</a></li>
+          <li class="nav__item nav__item--active"><a href="#home">home</a></li>
+          <li class="nav__item"><a href="#over-ons">over&nbsp;ons</a></li>
           <li class="nav__item"><a href="#prijzen">prijzen</a></li>
           <li class="nav__item"><a href="#openingsuren">openingsuren</a></li>
           <li class="nav__item"><a href="#contact">contact</a></li>
@@ -26,6 +27,11 @@
           <svg class="icon icon-search">
             <use href="#icon-search" />
           </svg>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </nav>
     </header>
@@ -37,7 +43,7 @@
           <img src="./images/logo-part3.png" alt="3" class="intro__img intro__img--three" />
         </div>
       </section>
-      <section class="section-two" id="over-ons">
+      <section class="section-two container" id="over-ons">
         <div class="section-two__title">
           <h1>proef <strong>het verschil</strong></h1>
           <h2>de beste frietjes, lekkerste snacks en heerlijkste sauzen.</h2>
@@ -76,13 +82,15 @@
         </div>
       </section>
       <section class="section-three"></section>
-      <section class="section-four" id="prijzen">
+      <section class="section-four container" id="prijzen">
         <h1>onze <strong>prijzen</strong></h1>
         <!-- nog vervangen door tabel met prijzen -->
-        <img src="./images/prices.png" alt="prijzen" />
+        <div class="prijzen">
+          <img src="./images/prices.png" alt="prijzen" />
+        </div>
       </section>
       <section class="section-five"></section>
-      <section class="section-six" id="openingsuren">
+      <section class="section-six container" id="openingsuren">
         <h2>openingsuren</h2>
         <table>
           <tr>
@@ -115,10 +123,10 @@
           </tr>
         </table>
       </section>
-      <section class="section-seven">
+      <section class="section-seven container">
         <img src="./images/uitsnede-large_snacks.jpeg" alt="snacks" class="snacks-img" />
       </section>
-      <section class="section-eight" id="contact">
+      <section class="section-eight container" id="contact">
         <h2>contacteer <strong>ons</strong></h2>
         <p>
           Heb je een vraag? Stel ze via dit online formulier en we antwoorden je zo snel mogelijk.
@@ -153,11 +161,13 @@
       </section>
     </main>
     <!-- ToTop -->
-    <button class="to-top">
-      <svg class="icon icon-circle-up">
-        <use href="#icon-circle-up" />
-      </svg>
-    </button>
+    <a href="#home">
+      <button class="to-top">
+        <svg class="icon icon-circle-up">
+          <use href="#icon-circle-up" />
+        </svg>
+      </button>
+    </a>
     <!-- Safari support script -->
     <!-- <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
     <script src="./js/index.js"></script>

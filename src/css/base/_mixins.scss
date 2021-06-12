@@ -6,7 +6,7 @@
     width: 5px;
   }
   color: #fff;
-  font-family: "Ford Antenna";
+  font-family: 'Ford Antenna';
   font-size: 20px;
   padding: 10px;
 }
@@ -25,8 +25,15 @@
   }
 }
 
-%responsive {
+@mixin responsive {
   display: block;
   width: 100%;
   height: auto;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

@@ -1,25 +1,16 @@
 import '../css/style.scss';
 
-const home = document.querySelector('.nav__item:first-of-type a');
-const top = document.querySelector('.to-top');
-const sectionOne = document.querySelector('.section-one');
+// mobile menu
+const hamburger = document.querySelector('.nav .hamburger');
+hamburger.onclick = () => hamburger.classList.toggle('active');
 
+// navigation scroll behavoir
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
+  anchor.onclick = function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
+      alignToTop: false,
     });
-  });
+  };
 });
-
-const topFunction = () => {
-  sectionOne.scrollIntoView({
-    behavior: 'smooth',
-    alignTo: false,
-    block: 'end',
-  });
-};
-
-home.onclick = () => topFunction();
-top.onclick = () => topFunction();

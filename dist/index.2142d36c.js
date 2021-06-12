@@ -381,31 +381,20 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 }
 
 },{}],"3L8AI":[function(require,module,exports) {
-var _styleScss = require("../css/style.scss");
-var home = document.querySelector('.nav__item:first-of-type a');
-var top = document.querySelector('.to-top');
-var sectionOne = document.querySelector('.section-one');
+var _styleScss = require("../css/style.scss"); // mobile menu
+var hamburger = document.querySelector('.nav .hamburger');
+hamburger.onclick = function() {
+    return hamburger.classList.toggle('active');
+}; // navigation scroll behavoir
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
+    anchor.onclick = function(e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            alignToTop: false
         });
-    });
+    };
 });
-var topFunction = function topFunction1() {
-    sectionOne.scrollIntoView({
-        behavior: 'smooth',
-        alignTo: false,
-        block: 'end'
-    });
-};
-home.onclick = function() {
-    return topFunction();
-};
-top.onclick = function() {
-    return topFunction();
-};
 
 },{"../css/style.scss":"4pAnw"}],"4pAnw":[function() {},{}]},["5tOvd","3L8AI"], "3L8AI", "parcelRequireefe8")
 
