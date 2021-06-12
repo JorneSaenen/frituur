@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Frituur Leest-Dorp</title>
+  </head>
+  <body>
+    <include src="./symbol-defs.svg"></include>
+    <!-- <include src="./header.html"></include> -->
+    <header>
+      <nav class="nav">
+        <a href="./"
+          ><img src="./images/LOGO-zwart-kleur-2.png" alt="top-logo" class="nav__logo"
+        /></a>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--active"><a href="#">home</a></li>
+          <li class="nav__item"><a href="#over-ons">over ons</a></li>
+          <li class="nav__item"><a href="#prijzen">prijzen</a></li>
+          <li class="nav__item"><a href="#openingsuren">openingsuren</a></li>
+          <li class="nav__item"><a href="#contact">contact</a></li>
+        </ul>
+        <div class="nav__search">
+          <svg class="icon icon-search">
+            <use href="#icon-search" />
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-one">
+        <div class="intro">
+          <img src="./images/logo-part1.png" alt="1" class="intro__img intro__img--one" />
+          <img src="./images/logo-part2.png" alt="2" class="intro__img intro__img--two" />
+          <img src="./images/logo-part3.png" alt="3" class="intro__img intro__img--three" />
+        </div>
+      </section>
+      <section class="section-two" id="over-ons">
+        <div class="section-two__title">
+          <h1>proef <strong>het verschil</strong></h1>
+          <h2>de beste frietjes, lekkerste snacks en heerlijkste sauzen.</h2>
+        </div>
+        <div class="cards">
+          <div class="cards__card">
+            <div class="icon">
+              <svg class="icon icon-thumb-up">
+                <use href="#icon-thumb-up" />
+              </svg>
+            </div>
+            <h3>Kwaliteit</h3>
+            <p>
+              Kwaliteit vinden wij belangrijk. Dit start al van bij onze keuze in aankoop. We werken
+              enkel met de bekende merken, zoals Mora, Beckers, Bicky, ….
+            </p>
+          </div>
+          <div class="cards__card">
+            <div class="icon">
+              <svg class="icon icon-clock">
+                <use href="#icon-clock" />
+              </svg>
+            </div>
+            <h3>Vlotte bediening</h3>
+            <p>Door de gestructureerde werkwijze van ons team bedienen we je zo snel mogelijk.</p>
+          </div>
+          <div class="cards__card">
+            <div class="icon">
+              <svg class="icon icon-smile">
+                <use href="#icon-smile" />
+              </svg>
+            </div>
+            <h3>Betaalbaar</h3>
+            <p>Wij staan bekend voor onze uitstekende prijs-kwaliteit verhouding.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section-three"></section>
+      <section class="section-four" id="prijzen">
+        <h1>onze <strong>prijzen</strong></h1>
+        <!-- nog vervangen door tabel met prijzen -->
+        <img src="./images/prices.png" alt="prijzen" />
+      </section>
+      <section class="section-five"></section>
+      <section class="section-six" id="openingsuren">
+        <h2>openingsuren</h2>
+        <table>
+          <tr>
+            <td>Maandag</td>
+            <td>Gesloten</td>
+          </tr>
+          <tr>
+            <td>Dinsdag</td>
+            <td>Gesloten</td>
+          </tr>
+          <tr>
+            <td>Woensdag</td>
+            <td>17u - 21u30</td>
+          </tr>
+          <tr>
+            <td>Donderdag</td>
+            <td>17u - 21u30</td>
+          </tr>
+          <tr>
+            <td>Vrijdag</td>
+            <td>17u - 22u30</td>
+          </tr>
+          <tr>
+            <td>Zaterdag</td>
+            <td>17u - 22u30</td>
+          </tr>
+          <tr>
+            <td>Zondag</td>
+            <td>17u - 21u30</td>
+          </tr>
+        </table>
+      </section>
+      <section class="section-seven">
+        <img src="./images/uitsnede-large_snacks.jpeg" alt="snacks" class="snacks-img" />
+      </section>
+      <section class="section-eight" id="contact">
+        <h2>contacteer <strong>ons</strong></h2>
+        <p>
+          Heb je een vraag? Stel ze via dit online formulier en we antwoorden je zo snel mogelijk.
+        </p>
+        <p>Wij aanvaarden GEEN bestellingen via de website.</p>
+        <a class="social" href="https://www.facebook.com" target="_blank">
+          <svg class="icon icon-facebook">
+            <use href="#icon-facebook" />
+          </svg>
+        </a>
+        <form type="submit">
+          <label for="naam">Je naam (verplicht)</label>
+          <input type="text" name="naam" />
+          <label for="email">Je email (verplicht)</label>
+          <input type="email" name="email" />
+          <label for="onderwerp">Je onderwerp (verplicht)</label>
+          <input type="text" name="onderwerp" />
+          <label for="bericht">Je bericht (verplicht)</label>
+          <textarea name="bericht" cols="30" rows="10"></textarea>
+          <button>Verzenden</button>
+        </form>
+      </section>
+      <section class="section-nine">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.088277091213!2d4.415418715912508!3d51.03299027955997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ef41e72c8cb7%3A0xe663279c3ca958b2!2sFrituur%20Leest-Dorp!5e0!3m2!1sen!2sbe!4v1623438470914!5m2!1sen!2sbe"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+    <!-- ToTop -->
+    <button class="to-top">
+      <svg class="icon icon-circle-up">
+        <use href="#icon-circle-up" />
+      </svg>
+    </button>
+    <!-- Safari support script -->
+    <!-- <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

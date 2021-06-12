@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+*::-moz-selection {
+  background: #fed400;
+  color: #fff;
+}
+*::selection {
+  background: #fed400;
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 88px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.nav {
+  max-width: 1170px;
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.nav a {
+  margin-right: auto;
+}
+.nav__logo {
+  width: 335px;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__item a {
+  color: #777;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  transition: color 200ms;
+  cursor: pointer;
+}
+.nav__item a:hover {
+  color: #fed400;
+}
+.nav__item--active a {
+  color: #fed400;
+}
+.nav__search {
+  font-size: 23px;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 300ms;
+  position: relative;
+}
+.nav__search:hover {
+  color: #666;
+}
+.nav__search::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 1px;
+  height: 26px;
+  background: #efefef;
+}
+.section-one {
+  background-color: #000;
+  height: calc(100vh - 88px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro__img--one {
+  width: 271px;
+  margin-bottom: 25px;
+}
+.intro__img--two {
+  width: 546px;
+  margin-bottom: 25px;
+}
+.intro__img--three {
+  width: 327px;
+}
+.section-two {
+  max-width: 1170px;
+  width: 70%;
+  margin: 0 auto;
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-two__title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section-two__title h1 {
+  line-height: 1.8;
+  font-size: 34px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.section-two__title h1 strong {
+  font-weight: 700;
+}
+.section-two__title h2 {
+  text-transform: uppercase;
+  color: #999999;
+  margin-bottom: 60px;
+}
+.section-two .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.section-two .cards__card {
+  width: 360px;
+  height: 194px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section-two .cards__card .icon {
+  font-size: 52px;
+  color: #fed400;
+  margin-bottom: 40px;
+}
+.section-two .cards__card h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.section-two .cards__card p {
+  color: #777;
+  line-height: 26px;
+  font-weight: 400;
+}
+.section-three {
+  height: 521px;
+  background-image: url(friet-achtergrond.0a274cdf.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-four {
+  height: 1266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.section-four h1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 32px;
+}
+.section-four h1 strong {
+  font-weight: 700;
+}
+.section-four img {
+  max-width: 1200px;
+}
+.section-five {
+  height: 521px;
+  background-image: url(bicky2.487852c8.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-six {
+  max-width: 1170px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.section-six h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.section-six table tbody {
+  font-size: 18px;
+}
+.section-six table tbody td {
+  font-size: 24px;
+  color: #777;
+  font-weight: 400;
+  padding-bottom: 28px;
+}
+.section-six table tbody td:first-child {
+  text-align: left;
+  padding-right: 300px;
+}
+.section-six table tbody td:last-child {
+  text-align: right;
+}
+.section-seven {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.section-seven img {
+  width: 100%;
+}
+.section-eight {
+  height: 1133px;
+}
+.to-top {
+  position: fixed;
+  font-size: 30px;
+  cursor: pointer;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  transition: color 300ms;
+}
+.to-top:hover {
+  color: #777;
+}
+/*# sourceMappingURL=index.8a3ba367.css.map */
