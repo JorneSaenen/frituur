@@ -93,13 +93,20 @@ header {
   }
   .hamburger {
     display: none;
+    margin-right: 10px;
     .bar {
       display: block;
       width: 25px;
       height: 3px;
       margin: 5px auto;
+      border-radius: 15px;
       transition: all 0.3s ease-in-out;
-      background-color: #fed400;
+      background-color: #bbb;
+    }
+    &:hover {
+      .bar {
+        background-color: #333;
+      }
     }
   }
 }
@@ -200,6 +207,7 @@ header {
     text-transform: uppercase;
     text-align: center;
     margin-top: 96px;
+    margin-bottom: 114px;
     strong {
       font-weight: 700;
     }
@@ -357,8 +365,8 @@ header {
 }
 
 @media screen and (max-width: 500px) {
-  .section-three {
-    // voorlopig test
+  .section-three,
+  .section-five {
     background-attachment: initial;
   }
 }
