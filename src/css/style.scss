@@ -30,6 +30,43 @@ header {
   left: 0;
   height: 88px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+  .mobile {
+    position: absolute;
+    top: 88px;
+    left: -100%;
+    width: 100%;
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 1);
+    display: block;
+    transition: all 300ms;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &--active {
+      left: 0;
+    }
+    &__item {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color 200ms;
+        cursor: pointer;
+        &:hover {
+          color: #fed400;
+        }
+      }
+      &--active {
+        a {
+          color: #fed400;
+        }
+      }
+    }
+  }
 }
 
 .nav {
