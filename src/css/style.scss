@@ -218,7 +218,9 @@ header {
     }
   }
   .prijzen {
-    max-width: 1200px;
+    @include flex();
+    //max-width: 400px;
+
     img {
       @include responsive();
     }
@@ -494,6 +496,11 @@ footer {
       &.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
       }
+    }
+  }
+  .section-four {
+    .prijzen {
+      @include flex(column);
     }
   }
 }
