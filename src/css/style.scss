@@ -121,17 +121,22 @@ header {
 
 .intro {
   @include flex(column);
+  margin-left: 20px;
+  margin-right: 20px;
   &__img {
+    img {
+      @include responsive();
+    }
     &--one {
-      width: 271px;
+      max-width: 271px;
       margin-bottom: 25px;
     }
     &--two {
-      width: 546px;
+      max-width: 546px;
       margin-bottom: 25px;
     }
     &--three {
-      width: 327px;
+      max-width: 327px;
     }
   }
 }
@@ -234,6 +239,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin-bottom: 80px;
+  // background-color: rgb(249, 249, 249);
   h2 {
     font-size: 28px;
     font-weight: 700;
@@ -252,7 +258,7 @@ header {
         padding-bottom: 28px;
         &:first-child {
           text-align: left;
-          padding-right: 300px;
+          padding-right: 250px;
         }
         &:last-child {
           text-align: right;
@@ -266,11 +272,135 @@ header {
     width: 100%;
   }
 }
-// .section-eight {}
 
+.section-eight {
+  h2 {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 96px;
+    margin-bottom: 30px;
+    strong {
+      font-weight: 700;
+    }
+  }
+  p {
+    color: #999999;
+    font-size: 20px;
+    text-align: center;
+    &:first-of-type {
+      margin-bottom: 15px;
+    }
+  }
+  .center {
+    @include flex();
+    margin-top: 70px;
+    margin-bottom: 115px;
+  }
+  .social {
+    @include flex();
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    &:hover {
+      color: #fff;
+      background-color: #1cbac8;
+    }
+  }
+  form {
+    @include flex(column);
+    margin: 0 auto;
+    label {
+      color: #777;
+      margin-bottom: 10px;
+    }
+    input,
+    textarea {
+      width: 45%;
+      margin-bottom: 25px;
+      border: 1px solid #dddddd;
+      outline: none;
+      padding: 10px 12px;
+    }
+    input {
+      height: 40px;
+    }
+    button {
+      font-size: 13px;
+      color: #fff;
+      background-color: #999999;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 14px 25px 14px 25px;
+      text-align: center;
+      border-radius: 2px;
+      border: none;
+      margin-bottom: 25px;
+      cursor: pointer;
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+footer {
+  background-color: #262626;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .footer-wrapper {
+    @include flex(row, space-between, start);
+    padding-top: 10px;
+    color: #fff;
+    h4 {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    p,
+    td {
+      color: #888;
+    }
+
+    .left {
+      @include flex(column, center, start);
+      p {
+        margin-bottom: 10px;
+        &:nth-last-of-type(2) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .center {
+      max-width: 285px;
+      img {
+        @include responsive();
+      }
+    }
+    .right {
+      table {
+        tbody {
+          tr {
+            td {
+              padding-bottom: 10px;
+              &:first-child {
+                padding-right: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .to-top {
   position: fixed;
   font-size: 30px;
+  color: #fed400;
   cursor: pointer;
   bottom: 15px;
   right: 15px;
@@ -296,6 +426,14 @@ header {
   .section-two .cards {
     @include make-col(3, 28px);
   }
+  .section-eight {
+    form {
+      input,
+      textarea {
+        width: 60%;
+      }
+    }
+  }
 }
 @media screen and (max-width: 940px) {
   .container {
@@ -304,6 +442,19 @@ header {
   .nav {
     &__logo {
       width: 250px;
+    }
+  }
+  footer {
+    .footer-wrapper {
+      @include flex(column, space-between, center);
+      text-align: center;
+      .left {
+        @include flex(column, center, center);
+      }
+      .center {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -361,6 +512,26 @@ header {
       }
     }
   }
+  .section-six {
+    table {
+      tbody {
+        td {
+          &:first-child {
+            padding-right: 150px;
+          }
+        }
+      }
+    }
+  }
+  .section-eight {
+    form {
+      input,
+      textarea {
+        width: 80%;
+      }
+    }
+  }
+
   // TODO: section 1 verkleinen.
 }
 
@@ -368,5 +539,16 @@ header {
   .section-three,
   .section-five {
     background-attachment: initial;
+  }
+  .section-six {
+    table {
+      tbody {
+        td {
+          &:first-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
   }
 }
